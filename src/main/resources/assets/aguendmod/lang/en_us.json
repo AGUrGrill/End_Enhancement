@@ -1,0 +1,12 @@
+{
+  "item.aguendmod.sapphire": "Sapphire",
+  "item.aguendmod.raw_sapphire": "Raw Sapphire",
+
+  "block.aguendmod.sapphire_block": "Sapphire Block",
+  "block.aguendmod.sapphire_ore": "Sapphire Ore",
+  "block.aguendmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.aguendmod.nether_sapphire_ore": "Nether Sapphire Ore",
+  "block.aguendmod.end_sapphire_ore": "End Sapphire Ore",
+
+  "creativetab.agu_end_tab": "AGU's End Enhancements"
+}
