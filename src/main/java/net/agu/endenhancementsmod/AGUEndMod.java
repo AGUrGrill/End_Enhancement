@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.agu.endenhancementsmod.block.ModBlocks;
 import net.agu.endenhancementsmod.item.ModCreativeModTabs;
 import net.agu.endenhancementsmod.item.ModItems;
+import net.agu.endenhancementsmod.loot.ModLootModifiers;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -62,6 +63,8 @@ public class AGUEndMod
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
+        // Register Modified Loot Tables
+        ModLootModifiers.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -75,8 +78,25 @@ public class AGUEndMod
         // Adds item to 'ingredients' tab
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(ModItems.SAPPHIRE);
-            event.accept(ModItems.RAW_SAPPHIRE);
+            event.accept(ModItems.IMPERIUM_INGOT);
+            event.accept(ModItems.ENDRIX_NUGGET);
+            event.accept(ModItems.ENDRIX_UPGRADE_SMITHING_TEMPLATE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.ENDRIX_ORE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
+        {
+            event.accept(ModItems.IMPERIUM_PICKAXE);
+            event.accept(ModItems.IMPERIUM_AXE);
+            event.accept(ModItems.IMPERIUM_SHOVEL);
+            event.accept(ModItems.IMPERIUM_HOE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.COMBAT)
+        {
+            event.accept(ModItems.IMPERIUM_SWORD);
+            event.accept(ModItems.ENDRIX_UPGRADE_SMITHING_TEMPLATE);
         }
     }
 

@@ -24,12 +24,7 @@ public class ModBlocks
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, AGUEndMod.MODID);
 
-    // Block return item
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block)
-    {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-    }
-
+    // Register block
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         RegistryObject<T> toReturn = BLOCKS.register(name, block); // Registers block
@@ -37,23 +32,17 @@ public class ModBlocks
         return toReturn;
     }
 
-    // Register sapphire block as iron block type
-    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    // Register the item of the block
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block)
+    {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    }
 
-    // Creates ore
-    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(2,4)));
-    public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
-                    .strength(3f).requiresCorrectToolForDrops(), UniformInt.of(2,4)));
-    public static final RegistryObject<Block> NETHER_SAPPHIRE_ORE = registerBlock("nether_sapphire_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
-                    .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(2,4)));
-    public static final RegistryObject<Block> END_SAPPHIRE_ORE = registerBlock("end_sapphire_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
-                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(4,8)));
+    // ENDRIX ORE
+    public static final RegistryObject<Block> ENDRIX_ORE = registerBlock("endrix_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).sound(SoundType.SLIME_BLOCK)
+                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
+
     public static void register (IEventBus eventBus)
     {
         BLOCKS.register(eventBus);

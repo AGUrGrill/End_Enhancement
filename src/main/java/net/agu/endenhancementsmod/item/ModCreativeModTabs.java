@@ -16,20 +16,22 @@ public class ModCreativeModTabs
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AGUEndMod.MODID);
 
     public static final RegistryObject<CreativeModeTab> AGU_END_TAB = CREATIVE_MODE_TABS.register("agu_end_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SAPPHIRE.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.IMPERIUM_INGOT.get()))
                     .title(Component.translatable("creativetab.agu_end_tab"))
                     .displayItems(((pParameters, pOutput) -> {
 
                         // Items
-                        pOutput.accept(ModItems.SAPPHIRE.get());
-                        pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                        pOutput.accept(ModItems.ENDRIX_NUGGET.get());
+                        pOutput.accept(ModItems.ENDRIX_UPGRADE_SMITHING_TEMPLATE.get());
+                        pOutput.accept(ModItems.IMPERIUM_INGOT.get());
+                        pOutput.accept(ModItems.IMPERIUM_SWORD.get());
+                        pOutput.accept(ModItems.IMPERIUM_PICKAXE.get());
+                        pOutput.accept(ModItems.IMPERIUM_AXE.get());
+                        pOutput.accept(ModItems.IMPERIUM_SHOVEL.get());
+                        pOutput.accept(ModItems.IMPERIUM_HOE.get());
 
                         // Blocks
-                        pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
-                        pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
-                        pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
-                        pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
-                        pOutput.accept(ModBlocks.END_SAPPHIRE_ORE.get());
+                        pOutput.accept(ModBlocks.ENDRIX_ORE.get());
 
                     }))
                     .build());
