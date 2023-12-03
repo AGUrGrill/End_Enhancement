@@ -16,21 +16,25 @@ import java.util.function.Supplier;
 
 public class AddItemModifier extends LootModifier
 {
+    public AddItemModifier(LootItemCondition[] conditionsIn, Item item)
+    {
+        super(conditionsIn);
+        this.item = item;
+    }
+
     public static final Supplier<Codec<AddItemModifier>> CODEC = Suppliers.memoize(()
             -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
             .fieldOf("item").forGetter(m -> m.item)).apply(inst, AddItemModifier::new)));
     private final Item item;
 
-    protected AddItemModifier(LootItemCondition[] conditionsIn, Item item) {
-        super(conditionsIn);
-        this.item = item;
-    }
 
-    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        if(context.getRandom().nextFloat() >= 0.95f)
-        {
-            generatedLoot.add(new ItemStack(item));
+    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context)
+    {
+        for(LootItemCondition condition : this.conditions) {
+            if(!condition.test(context))
+                generatedLoot.add(new ItemStack(item));
         }
+
         return generatedLoot;
     }
 
