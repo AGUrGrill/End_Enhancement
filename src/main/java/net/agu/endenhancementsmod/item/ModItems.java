@@ -36,6 +36,19 @@ public class ModItems
             () -> new HoeItem(ModToolTiers.IMPERIUM, -4, 0f,
                     new Item.Properties().fireResistant()));
 
+    public static final RegistryObject<Item> ENDRIX_HELMET = ITEMS.register("endrix_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.HELMET,
+                    new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ENDRIX_CHESTPLATE = ITEMS.register("endrix_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ENDRIX_LEGGINGS = ITEMS.register("endrix_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ENDRIX_BOOTS = ITEMS.register("endrix_boots",
+            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.BOOTS,
+                    new Item.Properties().fireResistant()));
+
     // Register items list
     public static void register(IEventBus eventBus)
     {

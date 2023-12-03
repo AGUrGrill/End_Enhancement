@@ -50,6 +50,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         imperiumSmithing(pWriter, Items.NETHERITE_AXE, RecipeCategory.TOOLS, ModItems.IMPERIUM_AXE.get());
         imperiumSmithing(pWriter, Items.NETHERITE_SHOVEL, RecipeCategory.TOOLS, ModItems.IMPERIUM_SHOVEL.get());
         imperiumSmithing(pWriter, Items.NETHERITE_HOE, RecipeCategory.TOOLS, ModItems.IMPERIUM_HOE.get());
+
+        imperiumSmithing(pWriter, Items.NETHERITE_HELMET, RecipeCategory.COMBAT, ModItems.ENDRIX_HELMET.get());
+        imperiumSmithing(pWriter, Items.NETHERITE_CHESTPLATE, RecipeCategory.COMBAT, ModItems.ENDRIX_CHESTPLATE.get());
+        imperiumSmithing(pWriter, Items.NETHERITE_LEGGINGS, RecipeCategory.COMBAT, ModItems.ENDRIX_LEGGINGS.get());
+        imperiumSmithing(pWriter, Items.NETHERITE_BOOTS, RecipeCategory.COMBAT, ModItems.ENDRIX_BOOTS.get());
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

@@ -9,6 +9,11 @@
   "item.aguendmod.imperium_shovel": "Endrix Shovel",
   "item.aguendmod.imperium_hoe": "Endrix Hoe",
 
+  "item.aguendmod.endrix_helmet": "Endrix Helmet",
+  "item.aguendmod.endrix_chestplate": "Endrix Chestplate",
+  "item.aguendmod.endrix_leggings": "Endrix Leggings",
+  "item.aguendmod.endrix_boots": "Endrix Boots",
+
   "block.aguendmod.endrix_ore": "Endrix Ore",
 
   "creativetab.agu_end_tab": "AGU's End Enhancements"

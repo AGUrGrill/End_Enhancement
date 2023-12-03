@@ -82,6 +82,10 @@ public class AGUEndMod
         {
             event.accept(ModItems.IMPERIUM_SWORD);
             event.accept(ModItems.ENDRIX_UPGRADE_SMITHING_TEMPLATE);
+            event.accept(ModItems.ENDRIX_HELMET);
+            event.accept(ModItems.ENDRIX_CHESTPLATE);
+            event.accept(ModItems.ENDRIX_LEGGINGS);
+            event.accept(ModItems.ENDRIX_BOOTS);
         }
     }
 

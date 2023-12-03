@@ -40,7 +40,8 @@ public class ModBlocks
 
     // ENDRIX ORE
     public static final RegistryObject<Block> ENDRIX_ORE = registerBlock("endrix_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).sound(SoundType.SLIME_BLOCK)
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).sound(SoundType.STONE)
+                    .explosionResistance(1200)
                     .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     public static void register (IEventBus eventBus)
