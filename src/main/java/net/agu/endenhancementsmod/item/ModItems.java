@@ -1,6 +1,7 @@
 package net.agu.endenhancementsmod.item;
 
 import net.agu.endenhancementsmod.AGUEndMod;
+import net.agu.endenhancementsmod.item.custom.ModArmorItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,16 +38,16 @@ public class ModItems
                     new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> ENDRIX_HELMET = ITEMS.register("endrix_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.HELMET,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ENDRIX_CHESTPLATE = ITEMS.register("endrix_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.CHESTPLATE,
+            () -> new ModArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ENDRIX_LEGGINGS = ITEMS.register("endrix_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.LEGGINGS,
+            () -> new ModArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ENDRIX_BOOTS = ITEMS.register("endrix_boots",
-            () -> new ArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.BOOTS,
+            () -> new ModArmorItem(ModArmorMaterials.ENDRIX, ArmorItem.Type.BOOTS,
                     new Item.Properties().fireResistant()));
 
     // Register items list
