@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "C": {
+      "item": "minecraft:chorus_fruit"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "pattern": [
+    " C ",
+    "CMC",
+    " B "
+  ],
+  "result": {
+    "item": "aguendmod:chorus_fruit_yogurt"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,4 @@
+// 1.20.1	2024-06-28T15:43:44.1218054	Registries
+1a36d9c2e2e6d4b7ac90474a7c72c942721bc960 data/aguendmod/forge/biome_modifier/add_endrix_ore.json
+b4f0322897ed42b207910042fdcf2056f8fffa63 data/aguendmod/worldgen/configured_feature/endrix_ore.json
+226dd4c893e7c88a2af1a7170d53e230c421771b data/aguendmod/worldgen/placed_feature/endrix_ore_placed.json

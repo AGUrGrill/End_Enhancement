@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "aguendmod:imperium_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_axe"
+  },
+  "result": {
+    "item": "aguendmod:imperium_axe"
+  },
+  "template": {
+    "item": "aguendmod:endrix_upgrade_smithing_template"
+  }
+}

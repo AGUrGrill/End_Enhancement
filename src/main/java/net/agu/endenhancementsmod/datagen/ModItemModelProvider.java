@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider
         simpleItem(ModItems.ENDRIX_NUGGET);
         simpleItem(ModItems.ENDRIX_UPGRADE_SMITHING_TEMPLATE);
         simpleItem(ModItems.IMPERIUM_INGOT);
+        simpleItem(ModItems.CHORUS_FRUIT_YOGURT);
 
         handheldItem(ModItems.IMPERIUM_SWORD);
         handheldItem(ModItems.IMPERIUM_PICKAXE);

@@ -14,7 +14,7 @@ import java.util.List;
 public class ModToolTiers
 {
     public static final Tier IMPERIUM = TierSortingRegistry.registerTier(
-          new ForgeTier(5, 2971, 10.0f, 4f, 25,
+          new ForgeTier(5, 2971, 11.0f, 4f, 20,
                   ModTags.Blocks.NEEDS_IMPERIUM_TOOL, () -> Ingredient.of(ModItems.IMPERIUM_INGOT.get())),
             new ResourceLocation(AGUEndMod.MODID, "imperium_ingot"), List.of(Tiers.NETHERITE), List.of());
 }

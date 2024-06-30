@@ -28,8 +28,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter)
     {
-        oreBlasting(pWriter, ENDRIX_SMELTABLES, RecipeCategory.MISC, ModItems.ENDRIX_NUGGET.get(), 0.5f, 400, "endrix_nuggets");
+        oreBlasting(pWriter, ENDRIX_SMELTABLES, RecipeCategory.MISC, ModItems.ENDRIX_NUGGET.get(), 0.5f, 200, "endrix_nuggets");
         oreSmelting(pWriter, ENDRIX_SMELTABLES, RecipeCategory.MISC, ModItems.ENDRIX_NUGGET.get(), 0.5f, 400, "endrix_nuggets");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, ModItems.CHORUS_FRUIT_YOGURT.get())
+                .pattern(" C ")
+                .pattern("CMC")
+                .pattern(" B ")
+                .define('B', Items.BOWL)
+                .define('M', Items.MILK_BUCKET)
+                .define('C', Items.CHORUS_FRUIT)
+                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.MILK_BUCKET))
+                .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.IMPERIUM_INGOT.get())
                 .pattern("EEE")

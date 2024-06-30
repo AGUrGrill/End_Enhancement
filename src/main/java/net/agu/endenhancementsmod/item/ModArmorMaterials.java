@@ -11,8 +11,8 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial
 {
-    ENDRIX("endrix", 187, new int[]{ 3, 8, 6, 3}, 25,
-            SoundEvents.ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.of(ModItems.ENDRIX_NUGGET.get()));
+    ENDRIX("endrix", 44, new int[]{ 3, 8, 6, 3}, 25,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 4f, 0.2f, () -> Ingredient.of(ModItems.ENDRIX_NUGGET.get()));
 
     private final String name;
     private final int durabilityMultiplier;

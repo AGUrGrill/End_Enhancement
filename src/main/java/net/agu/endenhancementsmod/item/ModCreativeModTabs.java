@@ -23,15 +23,17 @@ public class ModCreativeModTabs
                         // Items
                         pOutput.accept(ModItems.ENDRIX_NUGGET.get());
                         pOutput.accept(ModItems.IMPERIUM_INGOT.get());
-
                         pOutput.accept(ModItems.ENDRIX_UPGRADE_SMITHING_TEMPLATE.get());
+                        pOutput.accept(ModItems.CHORUS_FRUIT_YOGURT.get());
 
+                        // Weapon/Tools
                         pOutput.accept(ModItems.IMPERIUM_SWORD.get());
                         pOutput.accept(ModItems.IMPERIUM_PICKAXE.get());
                         pOutput.accept(ModItems.IMPERIUM_AXE.get());
                         pOutput.accept(ModItems.IMPERIUM_SHOVEL.get());
                         pOutput.accept(ModItems.IMPERIUM_HOE.get());
 
+                        // Armor
                         pOutput.accept(ModItems.ENDRIX_HELMET.get());
                         pOutput.accept(ModItems.ENDRIX_CHESTPLATE.get());
                         pOutput.accept(ModItems.ENDRIX_LEGGINGS.get());

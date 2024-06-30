@@ -2,6 +2,7 @@ package net.agu.endenhancementsmod;
 
 import com.mojang.logging.LogUtils;
 import net.agu.endenhancementsmod.block.ModBlocks;
+import net.agu.endenhancementsmod.datagen.DataGenerators;
 import net.agu.endenhancementsmod.item.ModCreativeModTabs;
 import net.agu.endenhancementsmod.item.ModItems;
 import net.agu.endenhancementsmod.loot.ModLootModifiers;
