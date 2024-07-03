@@ -1,7 +1,9 @@
 package net.agu.endenhancementsmod.item;
 
 import net.agu.endenhancementsmod.AGUEndMod;
+import net.agu.endenhancementsmod.effects.ModEffects;
 import net.agu.endenhancementsmod.item.custom.EndrixArmorItem;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,7 +26,10 @@ public class ModItems
             () -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> CHORUS_FRUIT_YOGURT = ITEMS.register("chorus_fruit_yogurt",
             () -> new BowlFoodItem(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(10).saturationMod(6).build())));
+                    new FoodProperties.Builder()
+                            .nutrition(10).saturationMod(6)
+                            .effect(new MobEffectInstance(ModEffects.VOID_RESISTANCE.get(), 500, 0), 1)
+                            .build())));
 
     //ENDRIX WEAPONS & TOOLS
     public static final RegistryObject<Item> IMPERIUM_SWORD = ITEMS.register("imperium_sword",

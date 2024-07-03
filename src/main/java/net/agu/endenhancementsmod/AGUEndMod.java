@@ -3,9 +3,11 @@ package net.agu.endenhancementsmod;
 import com.mojang.logging.LogUtils;
 import net.agu.endenhancementsmod.block.ModBlocks;
 import net.agu.endenhancementsmod.datagen.DataGenerators;
+import net.agu.endenhancementsmod.effects.ModEffects;
 import net.agu.endenhancementsmod.item.ModCreativeModTabs;
 import net.agu.endenhancementsmod.item.ModItems;
 import net.agu.endenhancementsmod.loot.ModLootModifiers;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -39,6 +41,8 @@ public class AGUEndMod
 
         // Register creative mode tab
         ModCreativeModTabs.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
