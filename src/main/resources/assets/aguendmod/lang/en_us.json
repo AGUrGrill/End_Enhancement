@@ -17,8 +17,8 @@
 
   "block.aguendmod.endrix_ore": "Endrix Ore",
 
-  "effects.aguendmod.void_resistance": "Void Resistance",
+  "effect.aguendmod.void_resistance": "Void Resistance",
 
-  "creativetab.agu_end_tab": "AGU's End Enhancements",
+  "creativetab.agu_end_tab": "AGU's End Enhancements"
 
 }
