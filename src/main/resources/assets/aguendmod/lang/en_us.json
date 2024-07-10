@@ -18,6 +18,9 @@
   "block.aguendmod.endrix_ore": "Endrix Ore",
 
   "effect.aguendmod.void_resistance": "Void Resistance",
+  "item.minecraft.potion.effect.void_resistance_potion": "Potion of Void Resistance",
+  "item.minecraft.splash_potion.effect.void_resistance_potion": "Splash Potion of Void Resistance",
+  "item.minecraft.lingering_potion.effect.void_resistance_potion": "Lingering Potion of Void Resistance",
 
   "creativetab.agu_end_tab": "AGU's End Enhancements"
 

@@ -2,15 +2,16 @@ package net.agu.endenhancementsmod;
 
 import com.mojang.logging.LogUtils;
 import net.agu.endenhancementsmod.block.ModBlocks;
-import net.agu.endenhancementsmod.datagen.DataGenerators;
 import net.agu.endenhancementsmod.effects.ModEffects;
 import net.agu.endenhancementsmod.event.ModEvents;
 import net.agu.endenhancementsmod.item.ModCreativeModTabs;
 import net.agu.endenhancementsmod.item.ModItems;
 import net.agu.endenhancementsmod.loot.ModLootModifiers;
 import net.agu.endenhancementsmod.networking.ModNetworking;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.agu.endenhancementsmod.potion.ModPotions;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -40,6 +41,7 @@ public class AGUEndMod
         ModCreativeModTabs.register(modEventBus);
 
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(new ModEvents());
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,6 +55,7 @@ public class AGUEndMod
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         ModNetworking.register();
+        PotionBrewing.addMix(Potions.AWKWARD, Items.POPPED_CHORUS_FRUIT, ModPotions.VOID_RESISTANCE_POTION.get());
     }
 
     // Add the example block item to the building blocks tab
