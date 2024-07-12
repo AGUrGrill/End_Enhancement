@@ -10,10 +10,12 @@ import net.agu.endenhancementsmod.loot.ModLootModifiers;
 import net.agu.endenhancementsmod.networking.ModNetworking;
 import net.agu.endenhancementsmod.potion.ModPotions;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.alchemy.PotionBrewing;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,7 +26,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+import java.util.function.Supplier;
+
 @Mod(AGUEndMod.MODID)
 public class AGUEndMod
 {
@@ -55,13 +58,16 @@ public class AGUEndMod
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         ModNetworking.register();
-        PotionBrewing.addMix(Potions.AWKWARD, Items.POPPED_CHORUS_FRUIT, ModPotions.VOID_RESISTANCE_POTION.get());
+
+        // VOID RESISTANCE POTION
+        Ingredient input = Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION,1), Potions.AWKWARD));
+        Ingredient ingredient = Ingredient.of(Items.POPPED_CHORUS_FRUIT);
+        ItemStack output = PotionUtils.setPotion(new ItemStack(Items.POTION,1), ModPotions.VOID_RESISTANCE_POTION.get());
+        BrewingRecipeRegistry.addRecipe(input, ingredient, output);
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        // Adds item to 'ingredients' tab
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(ModItems.IMPERIUM_INGOT);
@@ -87,6 +93,10 @@ public class AGUEndMod
             event.accept(ModItems.ENDRIX_CHESTPLATE);
             event.accept(ModItems.ENDRIX_LEGGINGS);
             event.accept(ModItems.ENDRIX_BOOTS);
+        }
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+        {
+            event.accept(ModItems.CHORUS_FRUIT_YOGURT);
         }
     }
 

@@ -3,6 +3,7 @@ package net.agu.endenhancementsmod.item;
 import net.agu.endenhancementsmod.AGUEndMod;
 import net.agu.endenhancementsmod.effects.ModEffects;
 import net.agu.endenhancementsmod.item.custom.EndrixArmorItem;
+import net.agu.endenhancementsmod.potion.ModPotions;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -31,7 +32,7 @@ public class ModItems
             () -> new BowlFoodItem(new Item.Properties().food(
                     new FoodProperties.Builder()
                             .nutrition(10).saturationMod(6)
-                            .effect(new MobEffectInstance(ModEffects.VOID_RESISTANCE.get(), 500, 0), 1)
+                            .effect(new MobEffectInstance(ModEffects.VOID_RESISTANCE.get(), 2700, 0), 1)
                             .build())));
 
     //ENDRIX WEAPONS & TOOLS
